@@ -11,7 +11,6 @@ URL:            http://pear.horde.org/
 Source0:        http://pear.horde.org/channel.xml
 BuildArch:      noarch
 BuildRequires:  php-pear >= 5.1.1
-PreReq:         php-pear >= 5.1.1
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 
