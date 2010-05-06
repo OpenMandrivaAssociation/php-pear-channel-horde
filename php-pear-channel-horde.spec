@@ -3,7 +3,7 @@
 
 Name:           php-pear-channel-horde
 Version:        1.0
-Release:        %mkrel 4
+Release:        %mkrel 5
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
@@ -11,6 +11,11 @@ URL:            http://pear.horde.org/
 Source0:        http://pear.horde.org/channel.xml
 BuildArch:      noarch
 BuildRequires:  php-pear >= 5.1.1
+Requires:	php-mbstring
+Requires:	php-mysql
+Requires:	php-session
+Requires:	php-sysvsem
+Requires:	php-tokenizer
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 
