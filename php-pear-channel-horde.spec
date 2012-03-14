@@ -3,7 +3,7 @@
 
 Name:           php-pear-channel-horde
 Version:        1.0
-Release:        %mkrel 8
+Release:        %mkrel 9
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
@@ -16,6 +16,7 @@ Requires:	php-mysql
 Requires:	php-session
 Requires:	php-sysvsem
 Requires:	php-tokenizer
+
 
 
 
@@ -45,22 +46,19 @@ from this channel to be installed.
 
 %post
 
-if [ $1 -eq  1 ] ; then
-   pear channel-add %{pear_xmldir}/pear.horde.org.xml > /dev/null || :
+if [ $1 -gt  1 ] ; then
+   pear channel-update %{pear_xmldir}/pear.horde.org.xml
 else
-   pear channel-update %{pear_xmldir}/pear.horde.org.xml > /dev/null ||:
+   pear channel-add %{pear_xmldir}/pear.horde.org.xml
 fi
 
-
-%postun
+%preun
 
 if [ $1 -eq 0 ] ; then
-   pear channel-delete pear.horde.org.xml > /dev/null || :
+   pear channel-delete pear.horde.org
 fi
 
 
 %files
 %defattr(-,root,root,-)
 %{pear_xmldir}/pear.horde.org.xml
-
-
