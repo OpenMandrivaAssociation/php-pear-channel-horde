@@ -3,7 +3,7 @@
 
 Name:           php-pear-channel-horde
 Version:        1.0
-Release:        %mkrel 9
+Release:        %mkrel 10
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
@@ -47,7 +47,7 @@ from this channel to be installed.
 %post
 
 if [ $1 -gt  1 ] ; then
-   pear channel-update %{pear_xmldir}/pear.horde.org.xml
+   pear channel-update pear.horde.org
 else
    pear channel-add %{pear_xmldir}/pear.horde.org.xml
 fi
