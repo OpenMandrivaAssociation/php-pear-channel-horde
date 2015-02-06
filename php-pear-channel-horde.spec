@@ -3,7 +3,7 @@
 
 Name:           php-pear-channel-horde
 Version:        1.0
-Release:        11
+Release:        12
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
