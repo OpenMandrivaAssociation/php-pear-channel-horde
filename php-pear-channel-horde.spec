@@ -7,7 +7,7 @@ Release:        12
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
-URL:            http://pear.horde.org/
+URL:            https://pear.horde.org/
 Source0:        http://pear.horde.org/channel.xml
 BuildArch:      noarch
 BuildRequires:  php-pear >= 5.1.1
