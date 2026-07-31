@@ -2,8 +2,8 @@
 %define pear_xmldir  %{_datadir}/pear/packages
 
 Name:           php-pear-channel-horde
-Version:        1.0
-Release:        12
+Version:        20160602
+Release:        1
 Summary:        Adds pear.horde.org channel to PEAR
 Group:          System/Libraries
 License:        BSD
